@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,7 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        urban: ['Urbanist', 'sans-serif'],
+      },
       colors: {
+        'primary': '#F4F1E8',
+        'secondary': '#689380',
+        'text': '#434343',
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
@@ -23,6 +32,7 @@ module.exports = {
         tight: 1.2,
       },
       fontSize: {
+        '4xl': '1.75rem',
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',

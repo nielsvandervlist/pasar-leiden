@@ -1,0 +1,7 @@
+header {
+    @apply max-h-[70px];
+    @apply p-2 lg:p-0;
+    .logo {
+        @apply md:w-[120px] w-2/3;
+    }
+}

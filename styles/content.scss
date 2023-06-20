@@ -1,0 +1,11 @@
+.content {
+
+    p {
+        @apply mb-8 tracking-wider leading-loose;
+    }
+
+    h2.wp-block-heading {
+        @apply text-4xl mb-8 tracking-wider leading-loose;
+    }
+}
+
