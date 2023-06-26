@@ -5,8 +5,10 @@
             @apply border-b-[2px] border-secondary;
             tr{
                 th {
+                    @apply bg-secondary;
+                    color: white;
                     text-align: left;
-                    padding: 20px 10px;
+                    padding: 20px;
                 }
             }
         }
@@ -14,7 +16,14 @@
             tr{
                 @apply border-b-[1px] border-secondary;
                 td {
-                    padding: 20px 10px;
+                    padding: 20px;
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+
+                &:last-child {
+                    border: 0px;
                 }
             }
         }

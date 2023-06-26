@@ -23,7 +23,7 @@ export default function Index({allPosts: {edges}, image, preview}) {
     return (
         <Layout preview={preview}>
             <Head>
-                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+                <title>{`Pasar Leiden`}</title>
             </Head>
             <Intro image={hero}/>
             <Container>

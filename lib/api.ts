@@ -55,6 +55,38 @@ export async function getProgramContent() {
     return data?.page
 }
 
+export async function getContactContent() {
+    const data = await fetchAPI(`
+    {
+        page(id: "44", idType: DATABASE_ID) {
+            content
+        }
+    }
+    `)
+    return data?.page
+}
+
+export async function getAllMedia() {
+    const data = await fetchAPI(`
+    {
+       
+            mediaItems {
+                edges {
+                  cursor
+                  node {
+                    id
+                    title
+                    altText
+                    sourceUrl
+                  }
+                }
+              }
+       
+    }
+    `)
+    return data?.mediaItems
+}
+
 export async function getFeaturedImage() {
     const data = await fetchAPI(`
   {

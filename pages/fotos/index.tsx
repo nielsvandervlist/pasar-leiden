@@ -2,34 +2,39 @@ import Head from 'next/head'
 import {GetStaticProps} from 'next'
 import Container from '../../components/container'
 import Layout from '../../components/layout'
-import {getFeaturedImage, getProgramContent} from '../../lib/api'
+import {getAllMedia, getFeaturedImage} from '../../lib/api'
 import {CMS_NAME} from '../../lib/constants'
 import Intro from "../../components/intro";
 
-export default function Index( {program, image, preview}) {
+export default function Index( {media, image, preview}) {
 
-    const table = program.content.replace(/\\"/g, '"')
     const hero = image.featuredImage.node.sourceUrl
 
     return (
         <Layout preview={preview}>
             <Head>
-                <title>{`Pasar Leiden Programma`}</title>
+                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
             </Head>
             <Intro image={hero}/>
             <Container>
-                <div className={'content'} dangerouslySetInnerHTML={{ __html: table }} />
+                <div className={'lg:grid grid-cols-12 gap-4'}>
+                {
+                    media.edges.map((photo,index) => {
+                        return <img className={'col-span-4'} src={photo.node.sourceUrl} alt={'media'} />
+                    })
+                }
+                </div>
             </Container>
         </Layout>
     )
 }
 
 export const getStaticProps: GetStaticProps = async ({preview = false}) => {
-    const program = await getProgramContent()
     const image = await getFeaturedImage()
+    const media = await getAllMedia()
 
     return {
-        props: {program,image, preview},
+        props: {media, image, preview},
         revalidate: 10,
     }
 }

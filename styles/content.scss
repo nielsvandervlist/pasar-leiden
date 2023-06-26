@@ -1,5 +1,9 @@
 .content {
 
+    * {
+        @apply mb-8;
+    }
+
     p {
         @apply mb-8 tracking-wider leading-loose;
     }
