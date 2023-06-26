@@ -20,7 +20,7 @@ export default function Index( {media, image, preview}) {
                 <div className={'lg:grid grid-cols-12 gap-4'}>
                 {
                     media.edges.map((photo,index) => {
-                        return <img className={'col-span-4'} src={photo.node.sourceUrl} alt={'media'} />
+                        return <img key={index} className={'col-span-4'} src={photo.node.sourceUrl} alt={'media'} />
                     })
                 }
                 </div>

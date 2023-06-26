@@ -4,18 +4,43 @@ import Logo from '../public/logo.png'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {useEffect, useState} from "react";
+import {useRouter} from 'next/router'
+import classNames from "classnames";
 
 
 export default function Header() {
 
     const [open, setOpen] = useState(false)
+    const router = useRouter();
 
-    const nav = <nav className={'ml-auto'}>
+    const links = [
+        {
+            name: 'Home',
+            href: '/',
+        },
+        {
+            name: 'Programma',
+            href: '/programma'
+        },
+        {
+            name: 'Fotos',
+            href: '/fotos'
+        },
+        {
+            name: 'Contact',
+            href: '/contact',
+        }
+    ]
+
+    const nav = <nav className={'lg:ml-auto'}>
         <ul className={'flex-col flex md:flex-row gap-8'}>
-            <li><Link className={'font-semibold text-lg tracking-wider'} href={'/'}>Home</Link></li>
-            <li><Link className={'font-semibold text-lg tracking-wider'} href={'/programma'}>Programma</Link></li>
-            <li><Link className={'font-semibold text-lg tracking-wider'} href={'/fotos'}>Foto's</Link></li>
-            <li><Link className={'font-semibold text-lg tracking-wider'} href={'/contact'}>Contact</Link></li>
+            {
+                links.map((link, index) => {
+                    return <li key={index}><Link className={classNames('font-semibold text-lg tracking-wider',
+                        {'border-b-[3px] border-secondary': router.asPath === link.href}
+                    )} href={link.href}>{link.name}</Link></li>
+                })
+            }
         </ul>
     </nav>
 
@@ -42,10 +67,9 @@ export default function Header() {
             }
             <nav className={'ml-auto hidden md:block'}>
                 <ul className={'flex-col flex md:flex-row gap-8'}>
-                    <li><Link className={'font-semibold text-lg tracking-wider'} href={'/'}>Home</Link></li>
-                    <li><Link className={'font-semibold text-lg tracking-wider'} href={'/programma'}>Programma</Link></li>
-                    <li><Link className={'font-semibold text-lg tracking-wider'} href={'/fotos'}>Foto's</Link></li>
-                    <li><Link className={'font-semibold text-lg tracking-wider'} href={'/contact'}>Contact</Link></li>
+                    {
+                        nav
+                    }
                 </ul>
             </nav>
         </header>
