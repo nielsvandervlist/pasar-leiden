@@ -31,7 +31,7 @@ export default function Index({allPosts: {edges}, image, preview}) {
             <Container>
                 <div className={'lg:grid grid-cols-12 gap-10'}>
                     <div className={'col-span-12 lg:col-span-5 lg:pb-20 mb-8 lg:mb-0'}>
-                        <h3 className={'text-2xl lg:text-4xl font-semibold mb-6 leading-9 tracking-wider'}>Wie is Pasar Leiden? jouw heerlijke gerechten?</h3>
+                        <h3 className={'text-2xl lg:text-4xl font-semibold mb-6 leading-9 tracking-wider'}>Wie is Pasar Leiden? </h3>
                         <p className={'leading-7 tracking-wide'}>Pasar Leiden (Indonesisch voor Leidse Markt) bestaat uit vier Indische (geboren en getogen) Leidenaren met een hart voor onze stad en de Indo-cultuur. De Pasar Leiden is een gratis evenement door én voor de Indo-community en ieder ander die hier affiniteit mee heeft.</p>
                     </div>
                     <div className={'card col-span-12 lg:col-span-5 lg:col-start-9 relative'}>
