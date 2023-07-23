@@ -19,7 +19,7 @@ export default function Index({content, image, preview}) {
             <Intro image={hero}/>
             <Container>
                 <div className={'grid grid-cols-3 gap-8'}>
-                    <div className={'col-span-1 rounded-lg bg-secondary px-8 pt-8 pb-16 text-white overflow-hidden'}>
+                    <div className={'col-span-3 lg:col-span-1 rounded-lg bg-secondary px-8 pt-8 pb-8 text-white overflow-hidden'}>
                         <h2 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Contact</h2>
                         <div className={'content'} dangerouslySetInnerHTML={{__html: contactContent}}/>
                     </div>

@@ -69,8 +69,7 @@ export async function getContactContent() {
 export async function getAllMedia() {
     const data = await fetchAPI(`
     {
-       
-            mediaItems {
+            mediaItems(first: 100) {
                 edges {
                   cursor
                   node {
@@ -82,7 +81,7 @@ export async function getAllMedia() {
                 }
               }
        
-    }
+    }   
     `)
     return data?.mediaItems
 }
@@ -122,7 +121,7 @@ export async function getAllPostsForHome(preview) {
     const data = await fetchAPI(
         `
     query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+      posts {
         edges {
           node {
             title

@@ -11,5 +11,15 @@
     h2.wp-block-heading {
         @apply text-4xl mb-8 tracking-wider leading-loose;
     }
+
+    ul {
+        margin-bottom: 0;
+        li{
+            @apply text-xl mb-4 tracking-wider leading-loose;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
 }
 

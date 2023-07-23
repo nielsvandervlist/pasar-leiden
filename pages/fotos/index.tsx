@@ -10,6 +10,8 @@ export default function Index( {media, image, preview}) {
 
     const hero = image.featuredImage.node.sourceUrl
 
+    console.log(media)
+
     return (
         <Layout preview={preview}>
             <Head>
@@ -17,10 +19,10 @@ export default function Index( {media, image, preview}) {
             </Head>
             <Intro image={hero}/>
             <Container>
-                <div className={'lg:grid grid-cols-12 gap-4'}>
+                <div className={'grid grid-cols-12 gap-4 mb-8'}>
                 {
                     media.edges.map((photo,index) => {
-                        return <img key={index} className={'col-span-4'} src={photo.node.sourceUrl} alt={'media'} />
+                        return <img key={index} className={'col-span-12 md:col-span-4'} src={photo.node.sourceUrl} alt={'media'} />
                     })
                 }
                 </div>
