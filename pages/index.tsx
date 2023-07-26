@@ -40,7 +40,7 @@ export default function Index({allPosts: {edges}, image, preview}) {
                             <h3 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Komt u ook 26
                                 Augustus?</h3>
                             <p className={'leading-7 tracking-wide'}>Na een succesvolle eerste editie komt Pasar Leiden terug op het Cultuurplein Lammermarkt in Leiden. Kom langs en geniet van heerlijk Indo eten, lifestyle kraampjes en live optredens!</p>
-                            <Button variant={'white'} href={'/'} className={'white mt-8'}>Bekijk
+                            <Button variant={'white'} href={'/programma'} className={'white mt-8'}>Bekijk
                                 programma <FontAwesomeIcon className={'ml-2'} icon={faArrowRightLong}/></Button>
                         </div>
                     </div>
