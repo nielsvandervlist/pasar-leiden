@@ -20,8 +20,6 @@ export default function Index({allPosts: {edges}, image, preview}) {
 
     const hero = image.featuredImage.node.sourceUrl
 
-    console.log(hero)
-
     return (
         <Layout preview={preview}>
             <Head>
