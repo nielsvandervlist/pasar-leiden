@@ -30,14 +30,14 @@ export default function Index({allPosts: {edges}, image, preview}) {
                 <div className={'lg:grid grid-cols-12 gap-10'}>
                     <div className={'col-span-12 lg:col-span-5 lg:pb-20 mb-8 lg:mb-0'}>
                         <h3 className={'text-2xl lg:text-4xl font-semibold mb-6 leading-9 tracking-wider'}>Wie is Pasar Leiden? </h3>
-                        <p className={'leading-7 tracking-wide'}>Pasar Leiden (Indonesisch voor Leidse Markt) bestaat uit vier Indische (geboren en getogen) Leidenaren met een hart voor onze stad en de Indo-cultuur. De Pasar Leiden is een gratis evenement door én voor de Indo-community en ieder ander die hier affiniteit mee heeft.</p>
+                        <p className={'leading-7 tracking-wide'}>Pasar Leiden wil de verbinding tussen de stad en haar Indo-community versterken en deze verbintenis behouden voor de aankomende generaties. Dit willen wij bereiken met ons jaarlijks gratis culturele festival.</p>
                     </div>
                     <div className={'card col-span-12 lg:col-span-5 lg:col-start-9 relative'}>
                         <div className={'rounded-lg bg-secondary px-8 pt-8 pb-16 text-white overflow-hidden lg:absolute lg:-top-[250px] right-0'}>
                             <Line style={'two'} className={'absolute left-0 right-0 bottom-0 z-10'}/>
-                            <h3 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Komt u ook 26
+                            <h3 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Komt u ook 31
                                 Augustus?</h3>
-                            <p className={'leading-7 tracking-wide'}>Na een succesvolle eerste editie komt Pasar Leiden terug op het Cultuurplein Lammermarkt in Leiden. Kom langs en geniet van heerlijk Indo eten, lifestyle kraampjes en live optredens!</p>
+                            <p className={'leading-7 tracking-wide'}>Na een succesvolle tweede editie komt Pasar Leiden terug. Kom langs en geniet van heerlijk Indo eten, lifestyle kraampjes en live optredens!</p>
                             <Button variant={'white'} href={'/programma'} className={'white mt-8'}>Bekijk
                                 programma <FontAwesomeIcon className={'ml-2'} icon={faArrowRightLong}/></Button>
                         </div>
