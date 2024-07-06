@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="bg-primary py-10">
             <Container>
               <div className={'flex items-center justify-center'}>
-                <h3 className={'text-text 3xl font-semibold tracking-wider'}>Pasar Leiden 2023</h3>
+                <h3 className={'text-text 3xl font-semibold tracking-wider'}>Pasar Leiden 2024</h3>
                 <ul className={'ml-auto flex'}>
                     <li className={'mr-4'}>
                         <a href={'https://www.facebook.com/pasarleiden'}>

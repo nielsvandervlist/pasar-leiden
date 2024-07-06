@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from "next/image";
-import Logo from '../public/logo.png'
+import Logo from '../public/logo-small.png'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {useEffect, useState} from "react";
