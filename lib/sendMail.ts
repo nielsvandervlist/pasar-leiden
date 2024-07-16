@@ -20,7 +20,7 @@ interface EmailOptions {
 export const sendEmail = async (options: EmailOptions) => {
     try {
         await transporter.sendMail({
-            from: '"Your Name" <your-email@example.com>', // Replace with your sender details
+            from: '"Your Name" nielsvandervlist@leiderdorpinstruments.nl',
             ...options,
         });
     } catch (err) {
