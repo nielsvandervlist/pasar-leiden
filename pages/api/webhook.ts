@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         // Handle the payment status (e.g., update your database)
         if (payment.status === 'paid') {
-            const qrCodeData = await generateQRCode(`Payment ID: ${paymentId}`);
+            const qrCodeData = await generateQRCode(paymentId);
             const emailHtml = `
                 <p>Thank you for your purchase!</p>
                 <p>Please find your QR code attached below:</p>
