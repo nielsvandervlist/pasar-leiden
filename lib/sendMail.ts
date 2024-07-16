@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-    host: 'wordpress-api-nielsvandervlist.eu', // Replace with your SMTP server details
-    port: 587,
+    host: 'mail.smtp2go.com', // Replace with your SMTP server details
+    port: 2525,
     secure: false, // true for 465, false for other ports
     auth: {
         user: process.env.SMTP_USER, // Add these to your .env.local file
