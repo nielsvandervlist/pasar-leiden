@@ -4,7 +4,7 @@ import CryptoJS from "crypto-js";
 export const generateQRCode = async (text: string): Promise<string> => {
     const signature = CryptoJS.HmacSHA256(text, process.env.SECRET_KEY).toString();
     const dataWithSignature = `${text}|${signature}`;
-    const url = `${process.env.LOCAL_URL}/qr-check?paymentId=${encodeURIComponent(dataWithSignature)}`;
+    const url = `${process.env.NEXT_PUBLIC_LOCAL_URL}/qr-check?paymentId=${encodeURIComponent(dataWithSignature)}`;
 
     try {
         return await QRCode.toDataURL(url);
