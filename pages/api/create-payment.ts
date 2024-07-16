@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { amount, currency, description } = req.body;
+    const { amount, currency, description, email } = req.body;
 
     if (!amount || !currency || !description) {
         return res.status(400).json({ error: 'Invalid input' });
@@ -22,6 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             description,
             redirectUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/thank-you`, // Temporary URL, will be updated
             webhookUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/api/webhook`,
+            metadata: {email}
         });
 
         // Update the redirectUrl with the payment ID

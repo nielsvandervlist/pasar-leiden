@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from "next/head";
+import {CMS_NAME} from "../../lib/constants";
+import Intro from "../../components/intro";
+import Container from "../../components/container";
+import Layout from "../../components/layout";
 
-const ThankYouPage: React.FC = () => {
+export default function ThankYou(){
     const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [paymentStatus, setPaymentStatus] = useState<string | null>(null);
@@ -36,15 +41,20 @@ const ThankYouPage: React.FC = () => {
     }
 
     return (
-        <div>
-            <h1>Thank You!</h1>
-            {paymentStatus === 'paid' ? (
-                <p>Your payment was successful. Thank you for your purchase!</p>
-            ) : (
-                <p>There was an issue with your payment. Please try again.</p>
-            )}
-        </div>
+        <Layout preview={''}>
+            <Head>
+                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+            </Head>
+            <Container>
+                <div>
+                    <h1>Thank You!</h1>
+                    {paymentStatus === 'paid' ? (
+                        <p>Your payment was successful. Thank you for your purchase!</p>
+                    ) : (
+                        <p>There was an issue with your payment. Please try again.</p>
+                    )}
+                </div>
+            </Container>
+        </Layout>
     );
 };
-
-export default ThankYouPage;

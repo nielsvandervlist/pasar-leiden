@@ -10,8 +10,6 @@ export default function Index( {media, image, preview}) {
 
     const hero = image.featuredImage.node.sourceUrl
 
-    console.log(media)
-
     return (
         <Layout preview={preview}>
             <Head>

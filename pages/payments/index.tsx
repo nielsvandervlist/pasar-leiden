@@ -1,6 +1,13 @@
 import { useState } from 'react';
+import Head from "next/head";
+import {CMS_NAME} from "../../lib/constants";
+import Layout from "../../components/layout";
+import Container from "../../components/container";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
+import Button from "../../components/button";
 
-const PaymentPage: React.FC = () => {
+export default function Payments(){
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -18,6 +25,7 @@ const PaymentPage: React.FC = () => {
                     amount: '2.00',
                     currency: 'EUR',
                     description: 'Ticket Pasar Leiden',
+                    email: 'niels.vder.vlist@gmail.com'
                 }),
             });
 
@@ -36,14 +44,26 @@ const PaymentPage: React.FC = () => {
     };
 
     return (
-        <div>
-            <h1>Payment Page</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <button onClick={handlePayment} disabled={loading}>
-                {loading ? 'Processing...' : 'Pay Now'}
-            </button>
-        </div>
+        <Layout preview={''}>
+            <Head>
+                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+            </Head>
+            <Container>
+                <div>
+                    <h1 className={'my-8 font-bold text-2xl'}>Tickets</h1>
+                    <Button
+                        disabled={loading}
+                        className={'mt-auto flex items-center'}
+                        variant={'secondary'}
+                        onClick={handlePayment}
+                    >
+                        Koop een ticket
+                        <FontAwesomeIcon className={'ml-4'} icon={faArrowRightLong}/>
+                    </Button>
+                    {error && <p style={{color: 'red'}}>{error}</p>}
+                </div>
+            </Container>
+        </Layout>
+
     );
 };
-
-export default PaymentPage;
