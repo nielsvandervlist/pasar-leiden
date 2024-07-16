@@ -15,9 +15,9 @@ const PaymentPage: React.FC = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    amount: '10.00', // Example amount
+                    amount: '2.00',
                     currency: 'EUR',
-                    description: 'Order #12345',
+                    description: 'Ticket Pasar Leiden',
                 }),
             });
 
@@ -27,7 +27,6 @@ const PaymentPage: React.FC = () => {
                 throw new Error(data.error);
             }
 
-            // Redirect the user to Mollie's payment page
             window.location.href = data._links.checkout.href;
         } catch (err) {
             setError((err as Error).message);

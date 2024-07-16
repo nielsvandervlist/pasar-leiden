@@ -13,17 +13,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
+        // Create the payment first
         const payment = await mollieClient.payments.create({
             amount: {
                 currency,
                 value: amount,
             },
             description,
-            redirectUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/thank-you`,
+            redirectUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/thank-you`, // Temporary URL, will be updated
             webhookUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/api/webhook`,
         });
 
-        res.status(200).json(payment);
+        // Update the redirectUrl with the payment ID
+        const updatedPayment = await mollieClient.payments.update(payment.id, {
+            redirectUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/thank-you?paymentId=${payment.id}`,
+        });
+
+        // Respond with the payment details
+        res.status(200).json(updatedPayment);
     } catch (error) {
         res.status(500).json({ error: (error as Error).message });
     }
