@@ -23,17 +23,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const payment = await mollieClient.payments.get(data);
 
         if (payment.metadata.scanned) {
-            return res.status(200).json({ status: payment.status, scanned: true });
+            return res.status(200).json({ status: payment.status, scanned: true, tickets: payment.metadata.tickets });
         }
 
         // Update the payment metadata to mark it as scanned
         await mollieClient.payments.update(data, {
             metadata: {
-                scanned: true
+                scanned: true,
+                tickets: payment.metadata.tickets - 1,
+                email: payment.metadata.email,
             }
         });
 
-        return res.status(200).json({ status: payment.status, scanned: false });
+        return res.status(200).json({ status: payment.status, scanned: false, tickets: payment.metadata.tickets });
     } catch (error) {
         return res.status(500).json({ error: (error as Error).message });
     }

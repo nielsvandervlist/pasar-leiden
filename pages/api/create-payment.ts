@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
-    const { amount, currency, description, email } = req.body;
+    const { amount, currency, description, email, tickets } = req.body;
 
     if (!amount || !currency || !description) {
         return res.status(400).json({ error: 'Invalid input' });
@@ -24,6 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             metadata: {
                 email: email,
                 scanned: false,
+                tickets: tickets,
             }
         });
 
