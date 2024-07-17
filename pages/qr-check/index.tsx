@@ -55,6 +55,7 @@ export default function QrCheck() {
                     })
                 } catch (error) {
                     console.log(error)
+                    console.log('error in updating value scanned')
                 }
             }
 
