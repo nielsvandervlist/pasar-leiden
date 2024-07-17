@@ -21,7 +21,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             description,
             redirectUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/thank-you`, // Temporary URL, will be updated
             webhookUrl: `${process.env.NEXT_PUBLIC_LOCAL_URL}/api/webhook`,
-            metadata: {email}
+            metadata: {
+                email: email,
+                scanned: false,
+            }
         });
 
         // Update the redirectUrl with the payment ID
