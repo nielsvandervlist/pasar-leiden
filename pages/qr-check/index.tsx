@@ -5,15 +5,17 @@ import Container from "../../components/container"; // Adjust the import path ba
 import Layout from "../../components/layout";
 import mollieClient from "../../lib/mollie"; // Adjust the import path based on your file structure
 
-export default function Qrcheck() {
+export default function QrCheck() {
+
     const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [paymentStatus, setPaymentStatus] = useState<string | null>(null);
     const [scanned, setScanned] = useState<string | null>(null);
     const [email, setEmail] = useState<string | null>(null);
-    const {paymentId} = router.query;
 
     useEffect(() => {
+
+        const {paymentId} = router.query;
 
         if (paymentId) {
             // Fetch the payment status from the backend
@@ -39,6 +41,9 @@ export default function Qrcheck() {
     }, [router.query]);
 
     useEffect(() => {
+
+        const {paymentId} = router.query;
+
         if (!scanned) {
             const update = async () => {
                 try {
