@@ -5,6 +5,8 @@ import {CMS_NAME} from "../../lib/constants";
 import Intro from "../../components/intro";
 import Container from "../../components/container";
 import Layout from "../../components/layout";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faCross, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default function ThankYou(){
     const router = useRouter();
@@ -46,12 +48,21 @@ export default function ThankYou(){
                 <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
             </Head>
             <Container>
-                <div>
-                    <h1>Thank You!</h1>
+                <div className='max-w-lg mx-auto my-8 md:my-16 p-8 border-primary border-solid border-[5px] rounded-md text-center'>
                     {paymentStatus === 'paid' ? (
+                        <>
+                        <h1 className='text-[48px] mb-2'>Thank You!</h1>
+                        <FontAwesomeIcon className='text-[48px] text-green-600 mb-8' icon={faCheckCircle}/>
                         <p>Your payment was successful. Thank you for your purchase!</p>
+                        <p>Please check your email</p>
+                        </>
                     ) : (
-                        <p>There was an issue with your payment. Please try again.</p>
+                        <>
+                            <h1 className='text-[32px] mb-2'>Something went wrong</h1>
+                            <FontAwesomeIcon className='text-[48px] text-red-600 mb-8' icon={faXmarkCircle}/>
+                            <p>There was an issue with your payment. Please try again.</p>
+                        </>
+                        
                     )}
                 </div>
             </Container>
