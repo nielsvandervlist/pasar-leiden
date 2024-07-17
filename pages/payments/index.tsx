@@ -26,7 +26,7 @@ export default function Payments() {
     };
 
     function formatValue(val: number) {
-        return (val * 2) + ":00";
+        return `${val * 2}.00`;
     }
 
     const handlePayment = async () => {
