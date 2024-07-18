@@ -98,7 +98,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 <p>Deze QR code is geldig voor ${payment.metadata.tickets} tickets</p>
                 <img src="${qrCodeData}" alt="QR Code" />
             <p>We kijken ernaar uit u te verwelkomen op 31 augustus in Het Pesthuis, Leiden!</p>
-            <img src="cid:qr-code" alt="QR Code" class="qr-code">
         </div>
         <div class="footer">
             <p>Volg ons op <a href="https://www.facebook.com" style="color: #fff;">Facebook</a> en <a href="https://www.instagram.com" style="color: #fff;">Instagram</a></p>
