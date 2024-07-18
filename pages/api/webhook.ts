@@ -53,6 +53,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             padding: 20px;
             text-align: center;
         }
+        .content p span {
+            font-weight: bold;   
+        }
         .content h2 {
             color: #434343;
             font-size: 1.75em;
@@ -60,6 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .content p {
             color: #434343;
             line-height: 1.5;
+            font-size: 14px;
         }
         .footer {
             text-align: center;
@@ -95,8 +99,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             <h2>Bedankt voor uw aankoop</h2>
             <p>Beste ${payment.metadata.email},</p>
             <p>Bedankt voor uw aankoop van een ticket voor Pasar Leiden 2024! In de bijlage vindt u een QR-code die u bij de ingang van het evenement kunt laten scannen.</p>
-                <p>Deze QR code is geldig voor ${payment.metadata.tickets} tickets</p>
-                <img src="cid:qr-code" alt="QR Code" class="qr-code">
+                <p>Deze QR code is geldig voor <span>${payment.metadata.tickets}</span> tickets</p>
+                <img width="250" height="250" src="cid:qr-code" alt="QR Code" class="qr-code">
             <p>We kijken ernaar uit u te verwelkomen op 31 augustus in Het Pesthuis, Leiden!</p>
         </div>
         <div class="footer">
