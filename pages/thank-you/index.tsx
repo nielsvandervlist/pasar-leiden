@@ -43,7 +43,7 @@ export default function ThankYou(){
     }
 
     return (
-        <Layout preview={''}>
+        <Layout className={'bg-primary'}>
             <Head>
                 <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
             </Head>

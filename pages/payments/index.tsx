@@ -63,12 +63,12 @@ export default function Payments() {
     };
 
     return (
-        <Layout preview={''}>
+        <Layout className={'bg-primary flex justify-center items-center'}>
             <Head>
                 <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
             </Head>
             <Container>
-                <div className={'max-w-lg mx-auto my-8 md:my-16 p-8 border-primary border-solid border-[5px] flex flex-col bg-white relative'}>
+                <div className={'max-w-lg mx-auto p-8 border-primary border-solid border-[5px] flex flex-col bg-white relative'}>
                     <h1 className={'mb-4 font-bold text-2xl'}>Tickets</h1>
                     <p className={'text-[14px] mb-4'}>Bestel hier uw tickets, u ontvangt een e-mail met uw ticket. Tickets zijn 2,- per stuk.</p>
                     <form>

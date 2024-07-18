@@ -4,4 +4,10 @@ header {
     .logo {
         @apply md:w-[120px] w-2/3;
     }
+
+    .ticket-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+    }
 }
