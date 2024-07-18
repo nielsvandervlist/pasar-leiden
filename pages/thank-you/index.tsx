@@ -33,8 +33,6 @@ export default function ThankYou(){
             };
 
             fetchPaymentStatus().then(r => console.log(r));
-        } else {
-            setLoading(false);
         }
     }, [router.query]);
 
