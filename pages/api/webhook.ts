@@ -93,10 +93,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         </div>
         <div class="content">
             <h2>Bedankt voor uw aankoop</h2>
-            <p>Beste [Naam],</p>
+            <p>Beste ${payment.metadata.email},</p>
             <p>Bedankt voor uw aankoop van een ticket voor Pasar Leiden 2024! In de bijlage vindt u een QR-code die u bij de ingang van het evenement kunt laten scannen.</p>
-                <p>Deze QR code is geldig voor aantal ${payment.metadata.tickets} tickets</p>
-                <p>Please find your QR code attached below:</p>
+                <p>Deze QR code is geldig voor ${payment.metadata.tickets} tickets</p>
                 <img src="${qrCodeData}" alt="QR Code" />
             <p>We kijken ernaar uit u te verwelkomen op 31 augustus in Het Pesthuis, Leiden!</p>
             <img src="cid:qr-code" alt="QR Code" class="qr-code">
@@ -116,6 +115,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     {
                         filename: 'qrcode.png',
                         path: qrCodeData,
+                        cid: 'qr-code'
                     },
                 ],
             });
