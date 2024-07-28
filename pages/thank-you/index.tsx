@@ -33,8 +33,6 @@ export default function ThankYou(){
             };
 
             fetchPaymentStatus().then(r => console.log(r));
-        } else {
-            setLoading(false);
         }
     }, [router.query]);
 
@@ -43,9 +41,9 @@ export default function ThankYou(){
     }
 
     return (
-        <Layout preview={''}>
+        <Layout className={'bg-primary'}>
             <Head>
-                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+                <title>Thank you</title>
             </Head>
             <Container>
                 <div className='max-w-lg mx-auto my-8 md:my-16 p-8 border-primary border-solid border-[5px] rounded-md text-center'>

@@ -4,3 +4,14 @@
         @apply bg-secondary text-white;
     }
 }
+
+.fixed-btn {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    -webkit-box-shadow: 0px 2px 32px -4px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 2px 32px -4px rgba(0,0,0,0.32);
+    box-shadow: 0px 2px 32px -4px rgba(0,0,0,0.32);
+}
