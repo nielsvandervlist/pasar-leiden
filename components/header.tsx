@@ -9,7 +9,6 @@ import classNames from "classnames";
 
 
 export default function Header() {
-
     const [open, setOpen] = useState(false)
     const router = useRouter();
 
