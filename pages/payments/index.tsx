@@ -26,7 +26,7 @@ export default function Payments() {
     };
 
     function formatValue(val: number) {
-        return `${(val * 2).toFixed(1)}${(val * 0.30).toFixed(2).substring(1)}`;
+        return `${val * 2}:${(val * 0.30 * 100).toFixed(0)}`;
     }
 
     const handlePayment = async () => {
