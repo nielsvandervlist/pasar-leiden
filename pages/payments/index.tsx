@@ -26,7 +26,7 @@ export default function Payments() {
     };
 
     function formatValue(val: number) {
-        return `${val * 2}.00`;
+        return `${(val * 2).toFixed(1)}${(val * 0.30).toFixed(2).substring(1)}`;
     }
 
     const handlePayment = async () => {
@@ -70,7 +70,7 @@ export default function Payments() {
             <Container>
                 <div className={'max-w-lg mx-auto p-8 border-primary border-solid border-[5px] flex flex-col bg-white relative'}>
                     <h1 className={'mb-4 font-bold text-2xl'}>Tickets</h1>
-                    <p className={'text-[14px] mb-4'}> Om het evenement jaarlijks terug te kunnen laten keren, vragen wij bij de entree om een symbolische bijdrage van €2,- (kinderen t/m 12 jaar zijn gratis).</p>
+                    <p className={'text-[14px] mb-4'}> Om het evenement jaarlijks terug te kunnen laten keren, vragen wij bij de entree om een symbolische bijdrage van €2,- (plus 0.30,- transactiekosten) (kinderen t/m 12 jaar zijn gratis).</p>
                     <form>
                         <fieldset className={'flex gap-4 mb-4 flex-col'}>
                             <label>Aantal tickets</label>
