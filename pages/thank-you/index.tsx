@@ -49,19 +49,19 @@ export default function ThankYou(){
                 <div className='max-w-lg mx-auto my-8 md:my-16 p-8 border-primary border-solid border-[5px] rounded-md text-center'>
                     {paymentStatus === 'paid' ? (
                         <>
-                        <h1 className='text-[48px] mb-2'>Thank You!</h1>
-                        <FontAwesomeIcon className='text-[48px] text-green-600 mb-8' icon={faCheckCircle}/>
-                        <p>Your payment was successful. Thank you for your purchase!</p>
-                        <p>Please check your email</p>
+                            <h1 className='text-[48px] mb-2'>Dank u wel!</h1>
+                            <FontAwesomeIcon className='text-[48px] text-green-600 mb-8' icon={faCheckCircle}/>
+                            <p>Uw betaling is gelukt. Bedankt voor uw aankoop!</p>
+                            <p>Controleer alstublieft uw e-mail</p>
                         </>
                     ) : (
                         <>
-                            <h1 className='text-[32px] mb-2'>Something went wrong</h1>
+                            <h1 className='text-[32px] mb-2'>Er is iets misgegaan</h1>
                             <FontAwesomeIcon className='text-[48px] text-red-600 mb-8' icon={faXmarkCircle}/>
-                            <p>There was an issue with your payment. Please try again.</p>
+                            <p>Er was een probleem met uw betaling. Probeer het alstublieft opnieuw.</p>
                         </>
-                        
                     )}
+
                 </div>
             </Container>
         </Layout>

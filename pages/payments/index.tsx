@@ -65,7 +65,7 @@ export default function Payments() {
     return (
         <Layout className={'bg-primary flex justify-center items-center'}>
             <Head>
-                <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+                <title>Payments</title>
             </Head>
             <Container>
                 <div className={'max-w-lg mx-auto p-8 border-primary border-solid border-[5px] flex flex-col bg-white relative'}>

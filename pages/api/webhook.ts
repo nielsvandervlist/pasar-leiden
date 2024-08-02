@@ -104,7 +104,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             <p>We kijken ernaar uit u te verwelkomen op 31 augustus in Het Pesthuis, Leiden!</p>
         </div>
         <div class="footer">
-            <p>Volg ons op <a href="https://www.facebook.com" style="color: #fff;">Facebook</a> en <a href="https://www.instagram.com" style="color: #fff;">Instagram</a></p>
+            <p>Volg ons op <a href="https://www.facebook.com/share/eVjHhzHrgkTc2GFG/?mibextid=LQQJ4d " style="color: #fff;">Facebook</a> en <a href="https://www.instagram.com/pasarleiden/ " style="color: #fff;">Instagram</a></p>
         </div>
     </div>
 </body>
