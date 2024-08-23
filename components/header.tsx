@@ -71,11 +71,11 @@ export default function Header() {
                                     )} href={link.href}>{link.name}</Link></li>
                             })
                         }
-                        <li>
+                        {/* <li>
                             <Button href={'/payments'} variant={'primaryFilled'} className={'items-center flex gap-2'}>
                                 Tickets <FontAwesomeIcon className={'text-[20px]'} icon={faTicket}/>
                             </Button>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
 

@@ -18,7 +18,7 @@ export default function Layout({ preview, children, className }: LayoutProps) {
       <div className={classNames("main-container overflow-x-hidden", className)}>
         <main>{children}</main>
       </div>
-        <TicketButton/>
+        {/* <TicketButton/> */}
       <Footer />
     </>
   )
