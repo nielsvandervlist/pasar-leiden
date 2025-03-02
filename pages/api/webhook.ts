@@ -98,7 +98,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         <div class="content">
             <h2>Bedankt voor uw aankoop</h2>
             <p>Beste ${payment.metadata.email},</p>
-            <p>Bedankt voor uw aankoop van een ticket voor Pasar Leiden 2024! In de bijlage vindt u een QR-code die u bij de ingang van het evenement kunt laten scannen.</p>
+            <p>Bedankt voor uw aankoop van een ticket voor Pasar Leiden 2025! In de bijlage vindt u een QR-code die u bij de ingang van het evenement kunt laten scannen.</p>
                 <p>Deze QR code is geldig voor <span>${payment.metadata.tickets}</span> tickets</p>
                 <img width="250" height="250" src="cid:qr-code" alt="QR Code" class="qr-code">
             <p>We kijken ernaar uit u te verwelkomen op 31 augustus in Het Pesthuis, Leiden!</p>
