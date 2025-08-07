@@ -21,11 +21,36 @@ interface ButtonProps {
     ref?: any,
 }
 
+// Helper function to check if URL is external
+const isExternalUrl = (url: string): boolean => {
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('mailto:') || url.startsWith('tel:')) {
+        return true;
+    }
+    return false;
+};
+
 export default function Button({href, children, className, variant, onClick, disabled, ref}: ButtonProps){
 
     className = classNames(variants[variant], className)
 
     if(href){
+        // Check if it's an external URL
+        if (isExternalUrl(href)) {
+            return (
+                <a 
+                    className={classNames('btn', className)} 
+                    href={href} 
+                    ref={ref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClick}
+                >
+                    {children}
+                </a>
+            );
+        }
+        
+        // Internal URL - use Next.js Link
         return <Link className={classNames('btn', className)} href={href} ref={ref}>
             {children}
         </Link>
