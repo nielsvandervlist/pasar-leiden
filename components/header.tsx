@@ -55,6 +55,11 @@ export default function Header() {
                                             )} href={link.href}>{link.name}</Link></li>
                                     })
                                 }
+                                <li>
+                                    <Button href={'https://leiden.wereldmuseum.nl/nl/zien-en-doen/activiteiten/pasar-leiden'} variant={'primaryFilled'} className={'items-center flex gap-2'}>
+                                        Tickets <FontAwesomeIcon className={'text-[20px]'} icon={faTicket}/>
+                                    </Button>
+                                </li>
                             </ul>
                         </nav>
                     </div>
