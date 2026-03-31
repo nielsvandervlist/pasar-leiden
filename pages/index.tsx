@@ -35,8 +35,8 @@ export default function Index({allPosts: {edges}, image, preview}) {
                     <div className={'card col-span-12 lg:col-span-5 lg:col-start-9 relative'}>
                         <div className={'rounded-lg bg-secondary px-8 pt-8 pb-16 text-white overflow-hidden lg:absolute lg:-top-[250px] right-0'}>
                             <Line style={'two'} className={'absolute left-0 right-0 bottom-0 z-10'}/>
-                            <h3 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Komt u ook 30 Augustus 2025?</h3>
-                            <p className={'leading-7 tracking-wide'}>Kom langs tijdens de 4e editie van Pasar Leiden en geniet van de Indische en Indonesische cultuur! Ervaar de overheerlijke keuken, de kleurrijke kraampjes, interactieve workshops en live optredens!</p>
+                            <h3 className={'text-2xl lg:text-5xl font-semibold mb-6 leading-snug tracking-wider'}>Komt u ook 29 en 30 Augustus 2026?</h3>
+                            <p className={'leading-7 tracking-wide'}>Kom langs tijdens het vijfjarig jubileum van Pasar Leiden en geniet van de Indische en Indonesische cultuur! Ervaar de overheerlijke keuken, de kleurrijke kraampjes, interactieve workshops en live optredens!</p>
                             <Button variant={'white'} href={'/programma'} className={'white mt-8'}>Bekijk
                                 programma <FontAwesomeIcon className={'ml-2'} icon={faArrowRightLong}/></Button>
                         </div>
@@ -56,7 +56,7 @@ export default function Index({allPosts: {edges}, image, preview}) {
                     <Container>
                         <div className={'text-center justify-center flex flex-col text-white'}>
                             <h2 className={'text-2xl lg:text-6xl font-semibold mb-8 tracking-wider'}>Waar is het?</h2>
-                            <p className={'lg:text-2xl max-w-[600px] mx-auto mb-8 font-light tracking-wider leading-relaxed'}>Zaterdag 30 augustus van 10.00-22.00 uur bij het Wereldmuseum Leiden. OV? 5 minuten lopen vanaf Leiden CS / Auto? Parkeergarage Morspoort / Parking Leiden Haagweg</p>
+                            <p className={'lg:text-2xl max-w-[600px] mx-auto mb-8 font-light tracking-wider leading-relaxed'}>Zaterdag 29 van 10.00-20.00 en zondag 30 augustus van 10.00-18.00 uur bij het Wereldmuseum Leiden. OV? 5 minuten lopen vanaf Leiden CS / Auto? Parkeergarage Morspoort / Parking Leiden Haagweg</p>
 
                             <FontAwesomeIcon className={'mb-8 text-3xl'} icon={faArrowDownLong}/>
                             <figure className={'text-center'}>
